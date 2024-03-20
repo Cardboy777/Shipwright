@@ -82,7 +82,7 @@ const std::vector<const char*> enhancementsCvars = {
     "gSkulltulaFreeze",
     "gMMBunnyHood",
     "gAdultBunnyHood",
-    "gFastChests",
+    "gEnhancements.ChestOpenSpeed",
     "gChestSizeAndTextureMatchesContents",
     "gFastDrops",
     "gBetterOwl",
@@ -655,7 +655,7 @@ const std::vector<PresetEntry> enhancedPresetEntries = {
     // Adult Bunny Hood
     PRESET_ENTRY_S32("gAdultBunnyHood", 1),
     // Fast Chests
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     // Fast Drops
     PRESET_ENTRY_S32("gFastDrops", 1),
     // Fast Ocarina Playback
@@ -779,7 +779,7 @@ const std::vector<PresetEntry> randomizerPresetEntries = {
     // Adult Bunny Hood
     PRESET_ENTRY_S32("gAdultBunnyHood", 1),
     // Fast Chests
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     // Fast Drops
     PRESET_ENTRY_S32("gFastDrops", 1),
     // Fast Ocarina Playback
@@ -874,7 +874,7 @@ const std::vector<PresetEntry> spockRacePresetEntries = {
     PRESET_ENTRY_S32("gNoForcedNavi", 1),
     PRESET_ENTRY_S32("gDisableLOD", 1),
     PRESET_ENTRY_S32("gDisableNaviCallAudio", 1),
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     PRESET_ENTRY_S32("gFastDrops", 1),
     PRESET_ENTRY_S32("gDpadText", 1),
     PRESET_ENTRY_S32("gDpadOcarina", 1),
@@ -981,7 +981,7 @@ const std::vector<PresetEntry> spockRaceNoLogicPresetEntries = {
     PRESET_ENTRY_S32("gDrawLineupTick", 1),
     PRESET_ENTRY_S32("gEquipmentCanBeRemoved", 1),
     PRESET_ENTRY_S32("gFastBoomerang", 1),
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     PRESET_ENTRY_S32("gFastDrops", 1),
     PRESET_ENTRY_S32("gFastFarores", 1),
     PRESET_ENTRY_S32("gFastOcarinaPlayback", 1),
@@ -1070,7 +1070,7 @@ const std::vector<PresetEntry> spockRaceNoLogicPresetEntries = {
 
 const std::vector<PresetEntry> s6PresetEntries = {
     PRESET_ENTRY_S32("gChestSizeAndTextureMatchesContents", CSMC_BOTH),
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     PRESET_ENTRY_S32("gMMBunnyHood", BUNNY_HOOD_FAST),
     PRESET_ENTRY_S32("gAdultBunnyHood", 1),
     PRESET_ENTRY_S32("gRandomizeBigPoeTargetCount", 1),
@@ -1104,7 +1104,7 @@ const std::vector<PresetEntry> s6PresetEntries = {
 
 const std::vector<PresetEntry> hellModePresetEntries = {
     PRESET_ENTRY_S32("gChestSizeAndTextureMatchesContents", CSMC_BOTH),
-    PRESET_ENTRY_S32("gFastChests", 1),
+    PRESET_ENTRY_S32("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_FAST),
     PRESET_ENTRY_S32("gMMBunnyHood", BUNNY_HOOD_FAST),
     PRESET_ENTRY_S32("gAdultBunnyHood", 1),
     PRESET_ENTRY_S32("gRandomizeBigPoeTargetCount", 1),

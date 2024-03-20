@@ -6845,7 +6845,7 @@ s32 Player_ActionChange_2(Player* this, PlayState* play) {
                     giEntry = this->getItemEntry;
                 }
                 EnBox* chest = (EnBox*)interactedActor;
-                if (CVarGetInteger("gFastChests", 0) != 0) {
+                if (CVarGetInteger("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_VANILLA) == CHEST_OPEN_SPEED_FAST) {
                     giEntry.gi = -1 * abs(giEntry.gi);
                 }
 
@@ -6857,6 +6857,11 @@ s32 Player_ActionChange_2(Player* this, PlayState* play) {
                     }
                 }
 
+                if(CVarGetInteger("gEnhancements.ChestOpenSpeed", CHEST_OPEN_SPEED_VANILLA) == CHEST_OPEN_SPEED_NO_CUTSCENE) {
+                    func_8083E4C4(play, this, &giEntry);
+                    return 1;
+                }
+                
                 func_80836898(play, this, func_8083A434);
                 this->stateFlags1 |= PLAYER_STATE1_GETTING_ITEM | PLAYER_STATE1_ITEM_OVER_HEAD | PLAYER_STATE1_IN_CUTSCENE;
                 func_8083AE40(this, giEntry.objectId);

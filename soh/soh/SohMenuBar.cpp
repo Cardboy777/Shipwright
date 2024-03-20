@@ -72,6 +72,7 @@ static const char* imguiScaleOptions[4] = { "Small", "Normal", "Large", "X-Large
     };
 
     static const char* chestStyleMatchesContentsOptions[4] = { "Disabled", "Both", "Texture Only", "Size Only" };
+    static const char* chestOpenSpeedOptions[3] = { "Vanilla", "Fast", "No Cutscene" };
     static const char* bunnyHoodOptions[3] = { "Disabled", "Faster Run & Longer Jump", "Faster Run" };
     static const char* mirroredWorldModes[9] = {
         "Disabled",           "Always",        "Random",          "Random (Seeded)",          "Dungeons",
@@ -621,7 +622,11 @@ void DrawEnhancementsMenu() {
                 UIWidgets::Tooltip("Nighttime Skulltulas will spawn during both day and night.");
                 UIWidgets::PaddedEnhancementCheckbox("Dampe Appears All Night", "gDampeAllNight", true, false);
                 UIWidgets::Tooltip("Makes Dampe appear anytime during the night, not just his usual working hours.");
-                UIWidgets::PaddedEnhancementCheckbox("Fast Chests", "gFastChests", true, false);
+                UIWidgets::EnhancementCombobox("gEnhancements.ChestOpenSpeed", chestOpenSpeedOptions, CHEST_OPEN_SPEED_VANILLA);
+                UIWidgets::Tooltip(
+                    "Fast - Kick open every chest\n"
+                    "No Cutscene - Skip the chest opening cutscene. Item will appear over Link's head like consumables"
+                );
                 UIWidgets::Tooltip("Kick open every chest");
                 UIWidgets::PaddedText("Chest size & texture matches contents", true, false);
                 if (UIWidgets::EnhancementCombobox("gChestSizeAndTextureMatchesContents", chestStyleMatchesContentsOptions, CSMC_DISABLED)) {

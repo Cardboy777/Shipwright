@@ -21,6 +21,12 @@ typedef enum {
 } BunnyHoodMode;
 
 typedef enum {
+    CHEST_OPEN_SPEED_VANILLA,
+    CHEST_OPEN_SPEED_FAST,
+    CHEST_OPEN_SPEED_NO_CUTSCENE
+} ChestOpenSpeed;
+
+typedef enum {
     MIRRORED_WORLD_OFF,
     MIRRORED_WORLD_ALWAYS,
     MIRRORED_WORLD_RANDOM,
